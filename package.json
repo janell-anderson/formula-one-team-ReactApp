@@ -1,0 +1,27 @@
+{
+  "name": "formula-one-team-reactapp",
+  "version": "1.0.0",
+  "description": "## Summary I will be taking a project I have done while in General Assembly and recoding it with React. The original was used with the MVC model. Instead of using Views I will be using React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janell-anderson/formula-one-team-ReactApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janell-anderson/formula-one-team-ReactApp/issues"
+  },
+  "homepage": "https://github.com/janell-anderson/formula-one-team-ReactApp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.4",
+    "pg-promise": "^8.4.6"
+  }
+}
