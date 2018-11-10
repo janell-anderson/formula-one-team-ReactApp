@@ -5,15 +5,15 @@ const respController = require('../controllers/responseController');
 // initial route to get all
 country.route('/')
   .get(
-      countryController.getAllcountrys,
+      countryController.getAllCountries,
       respController.sendOkResp,
       respController.sendErrResp);
 
 
 country.route('/:id')
   .get(
-    countryController.getOnecountry,
-    countryController.getDrivercountry,
+    countryController.getOneCountry,
+    countryController.getDriverCountry,
     respController.sendOkResp,
     respController.sendErrResp)
 

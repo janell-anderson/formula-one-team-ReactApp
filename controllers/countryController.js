@@ -8,7 +8,7 @@ function getAllCountries(req, res, next) {
     }).catch(next);
 }
 
-function getOnecountry(req, res, next) {
+function getOneCountry(req, res, next) {
   countrydb.getOneCountry(req.params.id)
     .then(data => {
       res.locals.country = data;
