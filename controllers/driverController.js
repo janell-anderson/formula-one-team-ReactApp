@@ -1,23 +1,24 @@
 const driverdb = require('../models/driver');
 
-function getAll(req, res, next) {
-  driverdb.getAll()
+function getAllDrivers(req, res, next) {
+  driverdb.getAllDrivers()
     .then(data => {
       res.locals.driver = data;
+      console.log(data);
       next();
     }).catch(next);
 }
 
-function getOne(req, res, next) {
-  driverdb.getOne(req.params.id)
+function getOneDriver(req, res, next) {
+  driverdb.getOneDriver(req.params.id)
     .then(data => {
       res.locals.driver = data;
       next();
   }).catch(next);
 }
 
-function create(req, res, next) {
-  driverdb.create(req.body)
+function createDriver(req, res, next) {
+  driverdb.createDriver(req.body)
     .then(data => {
       res.locals.driver = data
       console.log(res.locals.driver);
@@ -25,15 +26,15 @@ function create(req, res, next) {
   }).catch(next);
 }
 
-function destroy(req, res, next) {
-  driverdb.destroy(req.params.id)
+function destroyDriver(req, res, next) {
+  driverdb.destroyDriver(req.params.id)
     .then(data => {
       next();
     }).catch(next);
 }
 
-function update(req, res, next) {
-  driverdb.update(req.body)
+function updateDriver(req, res, next) {
+  driverdb.updateDriver(req.body)
     .then(data => {
       res.locals.driver = data;
       next();
@@ -41,9 +42,9 @@ function update(req, res, next) {
 }
 
 module.exports= {
-  getAll,
-  getOne,
-  create,
-  destroy,
-  update
+  getAllDrivers,
+  getOneDriver,
+  createDriver,
+  destroyDriver,
+  updateDriver
 }

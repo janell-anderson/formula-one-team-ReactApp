@@ -5,30 +5,30 @@ const respController = require('../controllers/responseController');
 // initial route to get all
 driver.route('/')
   .get(
-      driverController.getAll,
+      driverController.getAllDrivers,
       respController.sendOkResp,
       respController.sendErrResp);
 
 // the route for the driver form
 driver.route('/new')
   .post(
-    driverController.create,
+    driverController.createDriver,
     respController.sendOkResp,
     respController.sendErrResp);
 
 driver.route('/:id')
   .get(
-    driverController.getOne,
+    driverController.getOneDriver,
     respController.sendOkResp,
     respController.sendErrResp)
 
   .delete(
-    driverController.destroy,
+    driverController.destroyDriver,
     respController.sendOkResp,
     respController.sendErrResp)
 
   .put(
-    driverController.update,
+    driverController.updateDriver,
     respController.sendOkResp,
     respController.sendErrResp);
 

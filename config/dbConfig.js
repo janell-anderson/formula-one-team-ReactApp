@@ -1,5 +1,5 @@
 module.exports = process.env.DATABASE_URL || {
-    host: 'locahost',
+    host: 'localhost',
     port: 5432,
     database: 'teams_db'
 }

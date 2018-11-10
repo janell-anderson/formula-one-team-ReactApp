@@ -1,15 +1,15 @@
-const nationalitydb = require('../models/nationality');
+const nationdb = require('../models/nation');
 
-function getAll(req, res, next) {
-  nationalitydb.getAll()
+function getAllNations(req, res, next) {
+  nationdb.getAllNations()
     .then(data => {
       res.locals.nation = data;
       next();
     }).catch(next);
 }
 
-function getOne(req, res, next) {
-  nationalitydb.getOne(req.params.id)
+function getOneNation(req, res, next) {
+  nationdb.getOneNation(req.params.id)
     .then(data => {
       res.locals.nation = data;
       next();
@@ -17,7 +17,7 @@ function getOne(req, res, next) {
 }
 
 function getDriverNation(req, res, next) {
-  nationalitydb.getDriverNation(req.params.id)
+  nationdb.getDriverNation(req.params.id)
     .then(data => {
       res.locals.driver = data
       console.log(res.locals.posts);
@@ -26,7 +26,7 @@ function getDriverNation(req, res, next) {
 }
 
 module.exports= {
-  getAll,
-  getOne,
+  getAllNations,
+  getOneNation,
   getDriverNation
 }
