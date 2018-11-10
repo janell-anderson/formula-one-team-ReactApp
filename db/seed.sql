@@ -26,7 +26,7 @@ CREATE TABLE driver (
   name TEXT ,
   country TEXT,
   team TEXT,
-  nation_id INTEGER REFERENCES country(id)
+  country_id INTEGER REFERENCES country(id)
 --   img_url VARCHAR(400)
 );
 
@@ -53,7 +53,7 @@ VALUES
 
 
 
-INSERT INTO driver (carnum, name, country, team, nation_id)
+INSERT INTO driver (carnum, name, country, team, country_id)
 VALUES
 (44,'Lewis Hamilton','England', 'Mercedes', 5),
 (77, 'Valtteri Bottas','Finland', 'Mercedes', 6),

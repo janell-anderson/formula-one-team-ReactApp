@@ -2,11 +2,11 @@ const apiRouter = require('express').Router();
 
 // Calling both auth and blogs routers and using them as a path
 const driverRouter = require('./driver');
-const nationRouter = require('./nation');
+const countryRouter = require('./country');
 
 
 // whatever is in the path it will render from the apiRouter
 apiRouter.use('/driver', driverRouter);
-apiRouter.use('/nation', nationRouter);
+apiRouter.use('/country', countryRouter);
 
 module.exports = apiRouter;
