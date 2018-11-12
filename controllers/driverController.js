@@ -4,7 +4,6 @@ function getAllDrivers(req, res, next) {
   driverdb.getAllDrivers()
     .then(data => {
       res.locals.driver = data;
-      console.log(data);
       next();
     }).catch(next);
 }
@@ -21,7 +20,6 @@ function createDriver(req, res, next) {
   driverdb.createDriver(req.body)
     .then(data => {
       res.locals.driver = data
-      console.log(res.locals.driver);
       next();
   }).catch(next);
 }

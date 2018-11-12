@@ -10,6 +10,10 @@ export default class Nav extends Component {
                         <Link to='/'>
                             <li>Home</li>
                         </Link>
+                        
+                        <Link to='/api/driver'>
+                            <li>Drivers</li>
+                        </Link>
                     </ul>
                 </nav>
             </div>
