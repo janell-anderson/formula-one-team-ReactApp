@@ -7,7 +7,9 @@ export default class Home extends Component {
         return(
             <div>
                 <Nav />
+
                 <h1>Welcome to Formula 1 Driver Profile</h1>
+                
                 <Footer />
             </div>
         )

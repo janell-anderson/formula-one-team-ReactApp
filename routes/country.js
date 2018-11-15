@@ -6,7 +6,7 @@ const respController = require('../controllers/responseController');
 country.route('/')
   .get(
       countryController.getAllCountries,
-      respController.sendOkResp,
+      respController.sendOkRespCountry,
       respController.sendErrResp);
 
 
@@ -14,7 +14,7 @@ country.route('/:id')
   .get(
     countryController.getOneCountry,
     countryController.getDriverCountry,
-    respController.sendOkResp,
+    respController.sendOkRespCountry,
     respController.sendErrResp)
 
   module.exports = country;

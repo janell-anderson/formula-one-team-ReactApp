@@ -20,7 +20,7 @@ function getDriverCountry(req, res, next) {
   countrydb.getDriverCountry(req.params.id)
     .then(data => {
       res.locals.driver = data
-      console.log(res.locals.posts);
+      console.log(res.locals.driver);
       next();
   }).catch(next);
 }
