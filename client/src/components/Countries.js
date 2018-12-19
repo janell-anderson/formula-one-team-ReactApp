@@ -9,14 +9,14 @@ export default class Countries extends Component {
         return(
             <div>
                 <Nav />
-                {/* <h2>Country List</h2>
+                <h2>Country List</h2>
                 {this.props.country.map(country => (
                     <div key={country.id}>
                         <Link to={`country/${country.id}`}>
                             <h3>{country.name}</h3>
                         </Link>
                     </div>
-                ))} */}
+                ))}
             </div>
         )
     }

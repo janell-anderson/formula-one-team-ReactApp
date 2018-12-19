@@ -5,7 +5,8 @@ import Nav from './Nav';
 export default class Drivers extends Component {
     render() {
         // console.log("Hi I Drivers");
-        // console.log(this.props.driver);
+        console.log(this.props.driver);
+        // console.log(JSON.driver)
         return(
             <div>
                 <Nav />
@@ -13,7 +14,7 @@ export default class Drivers extends Component {
                 {this.props.driver.map(driver => (
                     <div key={driver.id}>
                         <Link to={`driver/${driver.id}`}>
-                            <h3>{driver.name}</h3>
+                            <h3>{driver}</h3>
                         </Link>
                     </div>
                 ))}
